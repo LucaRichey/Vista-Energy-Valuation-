@@ -97,14 +97,3 @@ At $65.00/share, the market prices:
 
 ---
 
-## 300-Point Major-Project Rubric Alignment
-
-| Rubric Criterion | Points | Key Deliverables & Evidence |
-|---|:---:|---|
-| **Problem Definition & Decision Usefulness** | 45 | Target gate enforcement (rejected HOOD, qualified VIST), explicit committee ask, 60/40 action strategy, frozen Edition A. |
-| **Data Integrity & Traceability** | 45 | Form 20-F Item 5 & Item 18 lineage, Week 2 Contamination Catalog, PEPASA ADS normalization. |
-| **Financial Soundness & Judgment** | 60 | Articulating 3-statement pro-forma, FCFF/WACC bridge, 4 material conditions, 3 non-negotiable reversal triggers. |
-| **Technical Execution & Usability** | 45 | Zero external dependencies, single-command CLI execution, formatted terminal output, clean architecture. |
-| **Validation, Sensitivity & Reproducibility** | 75 | Synthetic benchmark, Locked Changed-Input Record, 2D matrix, reverse-DCF solver, cold-run logs. |
-| **Professional Communication** | 30 | Institutional Memo & Deck, storyboards and complete transcripts for Videos 1, 2, and 3. |
-| **Total Score** | **300** | **Comprehensive Institutional Submission Bundle** |

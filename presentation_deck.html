@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vista Energy (NYSE: VIST) — Buy-Side Committee Deck</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+      overflow: hidden;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .deck-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+    }
+    .slide {
+      display: none;
+      width: 100%;
+      max-width: 1100px;
+      height: 85vh;
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 16px;
+      padding: 48px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      flex-direction: column;
+      justify-content: space-between;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+    .slide.active { display: flex; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .header {
+      border-bottom: 2px solid #3b82f6;
+      padding-bottom: 16px;
+      margin-bottom: 24px;
+    }
+    .tag {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #38bdf8;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    h1 { font-size: 2.2rem; color: #ffffff; }
+    h2 { font-size: 1.8rem; color: #ffffff; }
+    .content {
+      flex: 1;
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: #cbd5e1;
+      overflow-y: auto;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 16px;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+      margin-top: 16px;
+    }
+    .card {
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .card h3 {
+      font-size: 1.1rem;
+      color: #38bdf8;
+      margin-bottom: 8px;
+    }
+    .card .val {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+    .card .sub {
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+      font-size: 0.95rem;
+    }
+    th, td {
+      padding: 10px 14px;
+      text-align: left;
+      border-bottom: 1px solid #334155;
+    }
+    th {
+      background: #0f172a;
+      color: #93c5fd;
+      font-weight: 600;
+    }
+    tr:hover { background: #1e293b; }
+    .badge-buy {
+      background: #15803d;
+      color: #ffffff;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-weight: 700;
+      display: inline-block;
+    }
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #334155;
+      padding-top: 16px;
+      font-size: 0.9rem;
+      color: #64748b;
+    }
+    .controls {
+      display: flex;
+      gap: 12px;
+    }
+    button {
+      background: #3b82f6;
+      color: white;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    button:hover { background: #2563eb; }
+  </style>
+</head>
+<body>
+
+  <div class="deck-container">
+
+    <!-- Slide 1: Title -->
+    <div class="slide active" id="slide-1">
+      <div>
+        <div class="tag">Energy Strategy Buy-Side Analyst Group</div>
+        <h1 style="font-size: 2.8rem; margin: 16px 0;">Vista Energy, S.A.B. de C.V. (NYSE: VIST)</h1>
+        <p style="font-size: 1.3rem; color: #94a3b8;">Valuation Range, Financial Pro-Forma & Investment Committee Defense</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Current Price</h3>
+          <div class="val">$65.00</div>
+          <div class="sub">Market Cap: ~$7.15B</div>
+        </div>
+        <div class="card">
+          <h3>Base DCF Target</h3>
+          <div class="val" style="color: #4ade80;">$88.26</div>
+          <div class="sub">+35.8% Upside Margin of Safety</div>
+        </div>
+        <div class="card">
+          <h3>Recommendation</h3>
+          <div style="margin-top: 6px;"><span class="badge-buy">INITIATE (60% TRANCHE)</span></div>
+          <div class="sub" style="margin-top: 6px;">Reserve 40% for macro dips</div>
+        </div>
+      </div>
+      <div class="footer">
+        <span>Analyst: Luca Richey | FIN 43900</span>
+        <span>Use Left / Right Arrow Keys to Navigate</span>
+        <span>Slide 1 / 8</span>
+      </div>
+    </div>
+
+    <!-- Slide 2: Target Qualification -->
+    <div class="slide" id="slide-2">
+      <div class="header">
+        <div class="tag">Week 2 Admission Gate & Target Disqualification</div>
+        <h2>Operating Company vs. Financial Institution Gate</h2>
+      </div>
+      <div class="content">
+        <div class="grid-2">
+          <div class="card" style="border-left: 4px solid #ef4444;">
+            <h3 style="color: #f87171;">DISQUALIFIED: Robinhood (HOOD)</h3>
+            <p style="margin-top: 8px;">• Broker-dealer / financial institution.</p>
+            <p>• Core revenues derive from Net Interest Margin (NIM) and margin lending.</p>
+            <p>• Balance sheet dominated by segregated customer funds and margin debt.</p>
+            <p style="color: #fca5a5; margin-top: 8px;"><strong>Rule Violation:</strong> For financial institutions, debt is raw material, rendering FCFF and Enterprise Value bridges economically invalid.</p>
+          </div>
+          <div class="card" style="border-left: 4px solid #22c55e;">
+            <h3 style="color: #4ade80;">QUALIFIED: Vista Energy (VIST)</h3>
+            <p style="margin-top: 8px;">• Pure-play independent E&P operating company.</p>
+            <p>• High physical drilling reinvestment cycle in Vaca Muerta shale.</p>
+            <p>• Standard corporate capital structure with commercial debt.</p>
+            <p style="color: #86efac; margin-top: 8px;"><strong>100% Compliant:</strong> FCFF, WACC, and Enterprise-to-Equity bridges accurately reflect operating cash generation.</p>
+          </div>
+        </div>
+        <div class="card" style="margin-top: 20px;">
+          <h3>Form 20-F Historical Traceability (Audited Baseline)</h3>
+          <p>• FY2024 Audited Revenue: <strong>$1,640M</strong> | Cash: <strong>$764M</strong> | Gross Debt: <strong>$1,544M</strong> | Net Debt: <strong>$780M</strong></p>
+          <p>• Share Count: Normalized to <strong>110.0M fully diluted ADSs</strong> to incorporate Petronas PEPASA acquisition consideration.</p>
+        </div>
+      </div>
+      <div class="footer">
+        <span>Research Evolution & Lineage</span>
+        <span>Slide 2 / 8</span>
+      </div>
+    </div>
+
+    <!-- Slide 3: Operating Drivers & Pro-Forma -->
+    <div class="slide" id="slide-3">
+      <div class="header">
+        <div class="tag">Five-Year Operating Pro-Forma (FY2025E–FY2029E)</div>
+        <h2>Personalized Driver Architecture & Loud Articulation</h2>
+      </div>
+      <div class="content">
+        <table>
+          <thead>
+            <tr>
+              <th>Metric ($M except per-boe)</th>
+              <th>FY2025E</th>
+              <th>FY2026E</th>
+              <th>FY2027E</th>
+              <th>FY2028E</th>
+              <th>FY2029E</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Net Daily Production (boe/d)</strong></td>
+              <td>105,000</td>
+              <td>140,000</td>
+              <td>165,000</td>
+              <td>180,000</td>
+              <td><strong>190,000</strong></td>
+            </tr>
+            <tr>
+              <td>Realized Price ($/boe)</td>
+              <td>$64.50</td>
+              <td>$63.50</td>
+              <td>$62.50</td>
+              <td>$62.00</td>
+              <td>$61.50</td>
+            </tr>
+            <tr>
+              <td>Lifting Cost ($/boe)</td>
+              <td>$4.65</td>
+              <td>$4.50</td>
+              <td>$4.45</td>
+              <td>$4.40</td>
+              <td><strong>$4.40</strong></td>
+            </tr>
+            <tr>
+              <td>Gross Revenue ($M)</td>
+              <td>$2,472.0</td>
+              <td>$3,244.8</td>
+              <td>$3,764.1</td>
+              <td>$4,073.4</td>
+              <td>$4,265.0</td>
+            </tr>
+            <tr>
+              <td>Adjusted EBITDA ($M)</td>
+              <td>$1,663.7</td>
+              <td>$2,196.7</td>
+              <td>$2,547.9</td>
+              <td>$2,759.3</td>
+              <td>$2,884.3</td>
+            </tr>
+            <tr>
+              <td><strong>Free Cash Flow to Firm (FCFF)</strong></td>
+              <td style="color: #f87171;">-$79.9</td>
+              <td style="color: #4ade80;">+$567.0</td>
+              <td style="color: #4ade80;">+$935.6</td>
+              <td style="color: #4ade80;">+$1,265.4</td>
+              <td style="color: #4ade80;"><strong>+$1,488.1</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Balance Sheet Articulation Check</strong></td>
+              <td style="color: #4ade80;">$0.00 (PASS)</td>
+              <td style="color: #4ade80;">$0.00 (PASS)</td>
+              <td style="color: #4ade80;">$0.00 (PASS)</td>
+              <td style="color: #4ade80;">$0.00 (PASS)</td>
+              <td style="color: #4ade80;"><strong>$0.00 (PASS)</strong></td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="margin-top: 14px; font-size: 0.95rem; color: #94a3b8;">
+          * Loud check verification: Assets = Liabilities + Equity balances to $0.0000 across all 5 years. Ending cash ties directly to Cash Flow Statement.
+        </p>
+      </div>
+      <div class="footer">
+        <span>Three-Statement Pro-Forma</span>
+        <span>Slide 3 / 8</span>
+      </div>
+    </div>
+
+    <!-- Slide 4: FCF Inflection -->
+    <div class="slide" id="slide-4">
+      <div class="header">
+        <div class="tag">The Investment Core</div>
+        <h2>The Imminent Free Cash Flow Inflection</h2>
+      </div>
+      <div class="content">
+        <div class="grid-2">
+          <div class="card">
+            <h3>Peak Reinvestment (FY2025–2026)</h3>
+            <p>• FY2026 CapEx peaks at <strong>$1.05 Billion</strong> (55–65 horizontal wells connected).</p>
+            <p>• Net debt peaks at $780M as drilling ramp outpaces near-term evacuation.</p>
+            <p>• Market prices this trough as a permanent cash drain.</p>
+          </div>
+          <div class="card" style="border: 1px solid #4ade80;">
+            <h3 style="color: #4ade80;">The Harvest Phase (FY2027–2029)</h3>
+            <p>• Oldelval pipeline expansion (315k bbl/d) removes evacuation ceiling.</p>
+            <p>• Production ramps to 190,000 boe/d while CapEx drops to maintenance ($700M).</p>
+            <p>• <strong>FY2029 FCFF surges to $1.49 Billion</strong>, delivering a <strong>20.8% FCF yield</strong> on today's market cap!</p>
+          </div>
+        </div>
+        <div class="card" style="margin-top: 20px;">
+          <h3>Export Parity & Offshore Hard-Currency Escrow</h3>
+          <p>Over <strong>60% of Vista's crude</strong> is exported at international Brent parity. Under federal Decree 929 and the RIGI framework, proceeds are deposited into <strong>unrestricted offshore US dollar bank accounts</strong>, insulating cash flow from Argentine domestic peso devaluations.</p>
+        </div>
+      </div>
+      <div class="footer">
+        <span>Cash Flow Inflection</span>
+        <span>Slide 4 / 8</span>
+      </div>
+    </div>
+
+    <!-- Slide 5: DCF & Bridge -->
+    <div class="slide" id="slide-5">
+      <div class="header">
+        <div class="tag">FCFF / WACC Valuation Engine</div>
+        <h2>Enterprise-to-Equity Valuation Bridge</h2>
+      </div>
+      <div class="content">
+        <div class="grid-2">
+          <div class="card">
+            <h3>Cost of Capital (WACC = 12.67%)</h3>
+            <p>• Risk-Free Rate ($R_f$): <strong>4.25%</strong> (US 10-Yr Treasury)</p>
+            <p>• Beta ($\beta$): <strong>1.25</strong> | ERP: <strong>5.00%</strong></p>
+            <p>• Country Risk Premium: <strong>4.00%</strong> (Adjusted for export escrow)</p>
+            <p>• Cost of Equity: <strong>14.50%</strong> | After-tax Debt: <strong>5.36%</strong></p>
+            <p>• Target Weights: 80% Equity / 20% Debt</p>
+          </div>
+          <div class="card">
+            <h3>Valuation Bridge ($M)</h3>
+            <p>PV of Explicit 5-Yr FCFF: <strong>$2,796.4M</strong></p>
+            <p>PV of Terminal Value (g=2.0%): <strong>$7,831.9M</strong> (73.7% share)</p>
+            <p style="border-top: 1px solid #334155; padding-top: 4px;"><strong>Enterprise Value (EV): $10,628.3M</strong></p>
+            <p>(+) Cash: <strong>+$764.0M</strong> | (-) Debt: <strong>-$1,544.0M</strong></p>
+            <p>(-) ARO & Lease Liabilities: <strong>-$140.0M</strong></p>
+            <p style="border-top: 1px solid #334155; padding-top: 4px; color: #4ade80;"><strong>Equity Value: $9,708.3M</strong></p>
+            <p style="font-size: 1.4rem; font-weight: 700; color: #4ade80;">Intrinsic Value: $88.26 / share</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <span>Valuation Engine</span>
+        <span>Slide 5 / 8</span>
+      </div>
+    </div>
+
+    <!-- Slide 6: Peer Multiples vs DCF -->
+    <div class="slide" id="slide-6">
+      <div class="header">
+        <div class="tag">Method Disagreement (Do Not Mechanically Average)</div>
+        <h2>Why DCF ($88.26) Disagrees with Peer Multiples ($47–$51)</h2>
+      </div>
+      <div class="content">
+        <table>
+          <thead>
+            <tr>
+              <th>Valuation Method</th>
+              <th>Implied Share Price</th>
+              <th>vs. Current ($65)</th>
+              <th>Economic Rationale for Disagreement</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Base Case FCFF DCF</strong></td>
+              <td style="color: #4ade80; font-weight: 700;">$88.26</td>
+              <td style="color: #4ade80;">+35.8%</td>
+              <td>Captures long-term multi-well pad cash harvest and pipeline evacuation.</td>
+            </tr>
+            <tr>
+              <td>Peer EV / 2026E EBITDA (2.90x)</td>
+              <td style="color: #f87171;">$50.82</td>
+              <td style="color: #f87171;">-21.8%</td>
+              <td>Peers (YPF, PAM, GeoPark) suffer state intervention and declining conventional wells.</td>
+            </tr>
+            <tr>
+              <td>Peer 2026E Forward P/E (5.92x)</td>
+              <td style="color: #f87171;">$47.54</td>
+              <td style="color: #f87171;">-26.9%</td>
+              <td>Heavily distorted by accounting DD&A during peak drilling; cash conversion is much higher.</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="card" style="margin-top: 18px;">
+          <h3>Market-Implied Expectations (Reverse-DCF at $65.00)</h3>
+          <p>At $65.00, the market is pricing in either a perpetual realized oil price of <strong>$54.54/boe</strong> (sub-$60 Brent) OR a punitive <strong>15.47% WACC</strong> (~800 bps sovereign spread). The market prices massive operational failure, offering an asymmetric upside buffer.</p>
+        </div>
+      </div>
+      <div class="footer">
+        <span>Comparable Policy & Multiples</span>
+        <span>Slide 6 / 8</span>
+      </div>
+    </div>
+
+    <!-- Slide 7: Causal Scenarios & Stress Case -->
+    <div class="slide" id="slide-7">
+      <div class="header">
+        <div class="tag">Stress Testing & Governance</div>
+        <h2>Causal Scenarios & The Severe Downside Stress Case</h2>
+      </div>
+      <div class="content">
+        <table>
+          <thead>
+            <tr>
+              <th>Scenario</th>
+              <th>Realized Oil ($/boe)</th>
+              <th>FY29 Prod (boe/d)</th>
+              <th>WACC</th>
+              <th>Intrinsic Value</th>
+              <th>Upside / Downside</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>High (Bull Case)</strong></td>
+              <td>$68.00</td>
+              <td>210,000</td>
+              <td>11.87%</td>
+              <td style="color: #4ade80; font-weight: 700;">$139.96</td>
+              <td style="color: #4ade80;">+115.3%</td>
+            </tr>
+            <tr>
+              <td><strong>Base Case</strong></td>
+              <td>$62.00</td>
+              <td>190,000</td>
+              <td>12.67%</td>
+              <td style="color: #4ade80; font-weight: 700;">$88.26</td>
+              <td style="color: #4ade80;">+35.8%</td>
+            </tr>
+            <tr>
+              <td><strong>Low Case</strong></td>
+              <td>$54.00</td>
+              <td>160,000</td>
+              <td>13.07%</td>
+              <td style="color: #f87171; font-weight: 700;">$43.15</td>
+              <td style="color: #f87171;">-33.6%</td>
+            </tr>
+            <tr style="background: rgba(239, 68, 68, 0.1);">
+              <td><strong>Severe Downside Stress</strong></td>
+              <td>$45.00</td>
+              <td>125,000</td>
+              <td>14.96%</td>
+              <td style="color: #f87171; font-weight: 700;">$1.52</td>
+              <td style="color: #f87171;">-97.7%</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="card" style="margin-top: 16px; border-left: 4px solid #ef4444;">
+          <h3 style="color: #f87171;">What Breaks the Thesis (Severe Downside Shock)</h3>
+          <p>Global recession ($52 Brent) + 18-month takeaway pipeline stall + Argentine government hikes export retention taxes to 8% (20% total tax). Solvency is preserved via working capital lines, but equity value collapses to $1.52/share.</p>
+        </div>
+      </div>
+      <div class="footer">
+        <span>Scenario Engine</span>
+        <span>Slide 7 / 8</span>
+      </div>
+    </div>
+
+    <!-- Slide 8: Decision & Reversal Triggers -->
+    <div class="slide" id="slide-8">
+      <div class="header">
+        <div class="tag">Final Committee Action</div>
+        <h2>Recommendation, Tranches & Reversal Triggers</h2>
+      </div>
+      <div class="content">
+        <div class="grid-2">
+          <div class="card" style="border: 2px solid #22c55e;">
+            <h3 style="color: #4ade80;">ACTION: INITIATE ACTIVE POSITION</h3>
+            <p style="margin-top: 8px;">• <strong>Valuation Range:</strong> $43.15 to $139.96 / share.</p>
+            <p>• <strong>Target Price:</strong> $88.26 / share (+35.8% margin of safety).</p>
+            <p>• <strong>Execution Tranche:</strong> Allocate <strong>60% of target position</strong> today at &le; $66.00.</p>
+            <p>• <strong>Dry Powder:</strong> Reserve 40% to accumulate on cyclical pullbacks toward peer floor ($50–$55).</p>
+          </div>
+          <div class="card" style="border: 2px solid #ef4444;">
+            <h3 style="color: #f87171;">NON-NEGOTIABLE REVERSAL TRIGGERS</h3>
+            <p style="margin-top: 8px;"><strong>1. Commodity Slump:</strong> Realized price drops below $52.00/boe for 2 consecutive quarters &rarr; Halt buying.</p>
+            <p style="margin-top: 6px;"><strong>2. Sovereign Seizure:</strong> Repeal of Decree 929 offshore dollar escrow or export tax raised &gt; 10% &rarr; <strong>Sell immediately</strong>.</p>
+            <p style="margin-top: 6px;"><strong>3. Leverage Breach:</strong> Net Debt / EBITDA exceeds 1.75x &rarr; Downgrade to Watch.</p>
+          </div>
+        </div>
+        <div class="card" style="margin-top: 16px;">
+          <h3>Formal Validation Audit Check (Zero Failure)</h3>
+          <p style="color: #4ade80;">✔ Synthetic DCF Benchmark (0.000000 Diff) | ✔ Monotonicity Suite (PASS) | ✔ Locked Pre-Commit Audit (PASS) | ✔ Balance Sheet Gap ($0.0000) | ✔ Highest-Risk Test (PASS)</p>
+        </div>
+      </div>
+      <div class="footer">
+        <span>Committee Decision</span>
+        <span>Slide 8 / 8</span>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    let currentSlide = 1;
+    const totalSlides = 8;
+
+    function showSlide(n) {
+      document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
+      const target = document.getElementById('slide-' + n);
+      if (target) {
+        target.classList.add('active');
+        currentSlide = n;
+      }
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+        if (currentSlide < totalSlides) showSlide(currentSlide + 1);
+      } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+        if (currentSlide > 1) showSlide(currentSlide - 1);
+      }
+    });
+  </script>
+</body>
+</html>
+
